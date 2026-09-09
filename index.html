@@ -1357,6 +1357,23 @@
       font-style: normal;
     }
 
+    .location-link {
+      display: block;
+      width: fit-content;
+      border-radius: 10px;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .location-link:hover .location-address,
+    .location-link:focus-visible .location-address {
+      color: var(--lemon);
+    }
+
+    .location-link:focus-visible {
+      outline: 2px solid var(--lemon);
+      outline-offset: 5px;
+    }
+
     .location-address strong {
       display: block;
       margin-bottom: 5px;
@@ -2576,21 +2593,27 @@
               Locations
             </h4>
 
-            <address class="location-address">
-              <strong>Dubai</strong>
-              Scooter Media Collective – FZCO<br>
-              Building A1, Dubai Digital Park<br>
-              Dubai Silicon Oasis<br>
-              Dubai, United Arab Emirates
-            </address>
+            <a class="location-link" href="https://maps.app.goo.gl/JVMQUSqBiQJ8fuJ96" target="_blank" rel="noopener"
+              aria-label="Open the Dubai office in Google Maps">
+              <address class="location-address">
+                <strong>Dubai</strong>
+                Scooter Media Collective – FZCO<br>
+                Building A1, Dubai Digital Park<br>
+                Dubai Silicon Oasis<br>
+                Dubai, United Arab Emirates
+              </address>
+            </a>
 
-            <address class="location-address">
-              <strong>Mumbai</strong>
-              Scooter Media LLP<br>
-              WeWork, Enam Sambhav, C-20 G Block<br>
-              BKC Road, Bandra Kurla Complex, Bandra East<br>
-              Mumbai, Maharashtra 400051, India
-            </address>
+            <a class="location-link" href="https://maps.app.goo.gl/T4b8ftro7ERyhpcE7" target="_blank" rel="noopener"
+              aria-label="Open the Mumbai office in Google Maps">
+              <address class="location-address">
+                <strong>Mumbai</strong>
+                Scooter Media LLP<br>
+                WeWork, Enam Sambhav, C-20 G Block<br>
+                BKC Road, Bandra Kurla Complex, Bandra East<br>
+                Mumbai, Maharashtra 400051, India
+              </address>
+            </a>
 
           </div>
 
