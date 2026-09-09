@@ -314,6 +314,8 @@
 
     .hero h1 .yellow {
       color: var(--lemon);
+      display: inline-block;
+      white-space: nowrap;
     }
 
     .hero-description {
@@ -325,6 +327,10 @@
       line-height: 1.6;
 
       color: rgba(255, 255, 255, 0.82);
+    }
+
+    .hero-description p + p {
+      margin-top: 1em;
     }
 
     .hero-actions {
@@ -1902,9 +1908,14 @@
         Matter.
       </h1>
 
-      <p class="hero-description">
-        Scooter is a globally operating creative production studio creating culturally fluent, visually ambitious content across film, photography, animation, CGI and emerging technology. Our work spans genres, formats and geographies, bringing together creative thinking, the right talent and production expertise to shape ideas into compelling work.
-      </p>
+      <div class="hero-description">
+        <p>
+          Scooter is a globally operating creative production studio creating culturally fluent, visually ambitious content across film, photography, animation, CGI and emerging technology.
+        </p>
+        <p>
+          Our work spans genres, formats and geographies, bringing together creative thinking, the right talent and production expertise to shape ideas into compelling work.
+        </p>
+      </div>
 
 
       <div class="hero-actions">
