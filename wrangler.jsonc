@@ -1,6 +1,7 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "scooter-india",
+  "main": "src/worker.js",
   "compatibility_date": "2026-09-10",
   "observability": {
     "logs": {
@@ -17,6 +18,18 @@
   },
   "assets": {
     "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": [
+      "/",
+      "/about",
+      "/clients",
+      "/work",
+      "/crew",
+      "/news",
+      "/contact",
+      "/locations"
+    ],
+    "html_handling": "none",
     "not_found_handling": "404-page"
   }
 }

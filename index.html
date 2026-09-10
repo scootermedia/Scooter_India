@@ -1946,34 +1946,34 @@
 
     <div class="nav-inner">
 
-      <a href="#" class="logo" title="scooter">
+      <a href="/" class="logo" title="scooter" data-route>
         <img src="assets/scooter-logo.png" alt="Scooter">
       </a>
 
       <ul class="nav-links" id="navLinks">
 
         <li>
-          <a href="#about">About</a>
+          <a href="/about" data-route>About</a>
         </li>
 
         <li>
-          <a href="#clients">Clients</a>
+          <a href="/clients" data-route>Clients</a>
         </li>
 
         <li>
-          <a href="#india">Work</a>
+          <a href="/work" data-route>Work</a>
         </li>
 
         <li>
-          <a href="#team">Crew</a>
+          <a href="/crew" data-route>Crew</a>
         </li>
 
         <li>
-          <a href="#news">In the News</a>
+          <a href="/news" data-route>In the News</a>
         </li>
 
         <li>
-          <a href="#contact">Contact</a>
+          <a href="/contact" data-route>Contact</a>
         </li>
 
       </ul>
@@ -2027,7 +2027,7 @@
 
       <div class="hero-actions">
 
-        <a href="#india" class="button button-primary">
+        <a href="/work" class="button button-primary" data-route>
           View Our Work →
         </a>
 
@@ -2086,7 +2086,7 @@
             </div>
 
 
-            <a class="stat stat-link" href="#locations" aria-label="View our global hub addresses">
+            <a class="stat stat-link" href="/locations" data-route aria-label="View our global hub addresses">
 
               <div class="stat-number">
                 03
@@ -2662,7 +2662,7 @@
 
       <div class="footer-top">
 
-        <a href="#" class="footer-logo" title="scooter">
+        <a href="/" class="footer-logo" title="scooter" data-route>
           <img src="assets/scooter-logo.png" alt="Scooter">
         </a>
 
@@ -2676,15 +2676,15 @@
               Explore
             </h4>
 
-            <a href="#about">
+            <a href="/about" data-route>
               About
             </a>
 
-            <a href="#india">
+            <a href="/work" data-route>
               Work
             </a>
 
-            <a href="#team">
+            <a href="/crew" data-route>
               Crew
             </a>
 
@@ -2810,6 +2810,51 @@
   ========================================================= -->
 
   <script>
+
+    /* ---------------------------------------------------------
+       CLEAN SECTION ROUTES
+    --------------------------------------------------------- */
+
+    const sectionRoutes = {
+      "/about": "about",
+      "/clients": "clients",
+      "/work": "india",
+      "/crew": "team",
+      "/news": "news",
+      "/contact": "contact",
+      "/locations": "locations"
+    };
+
+    const scrollToRoute = (route, behavior = "auto") => {
+      if (route === "/") {
+        window.scrollTo({ top: 0, behavior });
+        return;
+      }
+
+      const section = document.getElementById(sectionRoutes[route]);
+      section?.scrollIntoView({ behavior, block: "start" });
+    };
+
+    const scrollToCurrentRoute = (behavior = "auto") => {
+      const route = window.location.pathname.replace(/\/$/, "") || "/";
+      scrollToRoute(route, behavior);
+    };
+
+    document.querySelectorAll("a[data-route]").forEach(link => {
+      link.addEventListener("click", event => {
+        if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+
+        if (window.location.protocol === "http:" || window.location.protocol === "https:") {
+          window.history.pushState({}, "", link.getAttribute("href"));
+        }
+
+        scrollToRoute(link.getAttribute("href"), "smooth");
+      });
+    });
+
+    window.addEventListener("popstate", () => scrollToCurrentRoute("smooth"));
+    window.addEventListener("DOMContentLoaded", () => scrollToCurrentRoute());
 
     /* ---------------------------------------------------------
        MOBILE MENU
