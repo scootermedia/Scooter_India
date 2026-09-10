@@ -113,44 +113,6 @@
           "isPartOf": { "@id": "https://www.scootermedia.co/#website" },
           "about": { "@id": "https://www.scootermedia.co/#organization" },
           "inLanguage": "en-IN"
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "https://www.scootermedia.co/#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What production services does Scooter Media offer in India?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Scooter Media provides end-to-end production for commercials, branded films, corporate videos, digital content, photography, animation, CGI, AI films and post-production."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Where does Scooter Media work?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Scooter Media has hubs in Mumbai, Dubai and Vancouver and manages productions across India and international markets."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can Scooter Media manage an end-to-end video production?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Scooter Media brings together creative development, directors and talent, production crews, location support, filming and post-production for complete project delivery."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Does Scooter Media create AI films and CGI content?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. The studio combines traditional production craft with AI filmmaking, animation, CGI and emerging technology when those approaches serve the creative idea."
-              }
-            }
-          ]
         }
       ]
     }
@@ -258,19 +220,6 @@
       color: transparent;
       -webkit-text-stroke: 1.5px currentColor;
     }
-
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-    }
-
 
     /* =========================================================
        NAVIGATION
@@ -1336,59 +1285,6 @@
 
 
     /* =========================================================
-       FAQ
-    ========================================================= */
-
-    .faq {
-      padding: 120px 0;
-      background: var(--ivory);
-      color: var(--deep-teal);
-    }
-
-    .faq-grid {
-      display: grid;
-      grid-template-columns: minmax(260px, 0.75fr) minmax(0, 1.25fr);
-      gap: clamp(48px, 8vw, 120px);
-      align-items: start;
-    }
-
-    .faq h2 {
-      font-size: clamp(48px, 7vw, 92px);
-      line-height: 0.88;
-      letter-spacing: -4px;
-      text-transform: uppercase;
-    }
-
-    .faq h2 span {
-      color: var(--ocean-blue);
-    }
-
-    .faq-list {
-      border-top: 1px solid var(--border-light);
-    }
-
-    .faq details {
-      border-bottom: 1px solid var(--border-light);
-      padding: 24px 0;
-    }
-
-    .faq summary {
-      cursor: pointer;
-      font-size: clamp(18px, 2vw, 25px);
-      font-weight: 700;
-      line-height: 1.25;
-    }
-
-    .faq details p {
-      max-width: 680px;
-      margin-top: 16px;
-      color: var(--muted);
-      font-size: 16px;
-      line-height: 1.7;
-    }
-
-
-    /* =========================================================
        CTA
     ========================================================= */
 
@@ -1722,11 +1618,6 @@
         gap: 40px;
       }
 
-      .faq-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-
       .press-list {
         max-width: 100%;
       }
@@ -1822,8 +1713,7 @@
       .capabilities,
       .work,
       .team,
-      .network,
-      .faq {
+      .network {
         padding: 70px 0;
       }
 
@@ -1840,11 +1730,6 @@
       .work h2,
       .team h2,
       .network h2 {
-        font-size: clamp(36px, 12vw, 70px);
-        letter-spacing: -2px;
-      }
-
-      .faq h2 {
         font-size: clamp(36px, 12vw, 70px);
         letter-spacing: -2px;
       }
@@ -2072,10 +1957,6 @@
         </li>
 
         <li>
-          <a href="#services">Services</a>
-        </li>
-
-        <li>
           <a href="#clients">Clients</a>
         </li>
 
@@ -2132,15 +2013,14 @@
         Make<br>
         <span class="yellow">Somethin<br>G</span>
         Matter.
-        <span class="sr-only">Scooter Media — video production company in India.</span>
       </h1>
 
       <div class="hero-description">
         <p>
-          Scooter is an India-based video production company and creative media studio creating culturally fluent, visually ambitious commercials, branded films, corporate videos, photography, animation, CGI and AI films.
+          Scooter is a globally operating creative production studio creating culturally fluent, visually ambitious content across film, photography, animation, CGI and emerging technology.
         </p>
         <p>
-          From our Mumbai hub, we manage productions across India and connect projects with our teams in Dubai and Vancouver, bringing together creative thinking, the right talent and end-to-end production expertise.
+          Our work spans genres, formats and geographies, bringing together creative thinking, the right talent and production expertise to shape ideas into compelling work.
         </p>
       </div>
 
@@ -2168,73 +2048,6 @@
 
 
   <!-- =========================================================
-       SERVICES
-  ========================================================= -->
-
-  <section class="capabilities" id="services">
-
-    <div class="container">
-
-      <div class="section-label">
-        01 / Production Services
-      </div>
-
-      <div class="capabilities-header">
-
-        <h2>
-          Made in India.<br>
-          <span>Built for anywhere.</span>
-        </h2>
-
-        <p class="capabilities-intro">
-          End-to-end creative production for brands, agencies and organizations across India—from concept and crew to shoot, post-production and final delivery.
-        </p>
-
-      </div>
-
-      <div class="capability-grid">
-
-        <article class="capability">
-          <div class="capability-number">01 / Film</div>
-          <div>
-            <h3>Film &amp; Video Production</h3>
-            <p>Commercials, corporate videos, brand films, documentaries, interviews and digital-first content produced in Mumbai and across India.</p>
-          </div>
-        </article>
-
-        <article class="capability">
-          <div class="capability-number">02 / Branded</div>
-          <div>
-            <h3>Commercial &amp; Branded Content</h3>
-            <p>Creative development, directors, casting, crews, locations and production management for advertising agencies and global brands.</p>
-          </div>
-        </article>
-
-        <article class="capability">
-          <div class="capability-number">03 / Visual</div>
-          <div>
-            <h3>Photography, Animation &amp; CGI</h3>
-            <p>Campaign photography, product visuals, motion design, 2D and 3D animation, CGI and visual effects for every screen and format.</p>
-          </div>
-        </article>
-
-        <article class="capability">
-          <div class="capability-number">04 / Emerging</div>
-          <div>
-            <h3>AI Filmmaking &amp; Post</h3>
-            <p>AI-assisted filmmaking, editing, colour, sound and finishing—combining emerging technology with experienced production craft.</p>
-          </div>
-        </article>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =========================================================
        ABOUT
   ========================================================= -->
 
@@ -2243,7 +2056,7 @@
     <div class="container">
 
       <div class="section-label">
-        02 / About Scooter
+        01 / About Scooter
       </div>
 
 
@@ -2716,49 +2529,6 @@
   </section>
 
 
-  <!-- =========================================================
-       FAQ
-  ========================================================= -->
-
-  <section class="faq" id="faq">
-
-    <div class="container faq-grid">
-
-      <div>
-        <div class="section-label">06 / Frequently Asked</div>
-        <h2>Production,<br><span>clearly.</span></h2>
-      </div>
-
-      <div class="faq-list">
-        <details>
-          <summary>What production services does Scooter Media offer in India?</summary>
-          <p>Scooter Media provides end-to-end production for commercials, branded films, corporate videos, digital content, photography, animation, CGI, AI films and post-production.</p>
-        </details>
-
-        <details>
-          <summary>Where does Scooter Media work?</summary>
-          <p>We have hubs in Mumbai, Dubai and Vancouver and manage productions across India and international markets through trusted local crews and production partners.</p>
-        </details>
-
-        <details>
-          <summary>Can Scooter Media manage an end-to-end video production?</summary>
-          <p>Yes. We bring together creative development, directors and talent, production crews, location support, filming and post-production for complete project delivery.</p>
-        </details>
-
-        <details>
-          <summary>Does Scooter Media create AI films and CGI content?</summary>
-          <p>Yes. We combine traditional production craft with AI filmmaking, animation, CGI and emerging technology when those approaches serve the creative idea.</p>
-        </details>
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-
-
 
 
   <!-- =========================================================
@@ -2949,10 +2719,6 @@
 
             <a href="mailto:hello@scootermedia.co">
               Email
-            </a>
-
-            <a href="tel:+919051222997">
-              +91 90512 22997
             </a>
 
           </div>
