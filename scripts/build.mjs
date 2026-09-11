@@ -7,7 +7,15 @@ const output = resolve(root, "dist");
 
 await rm(output, { recursive: true, force: true });
 await mkdir(output, { recursive: true });
-const staticFiles = ["index.html", "404.html", "_headers", "robots.txt", "sitemap.xml", "llms.txt"];
+const staticFiles = [
+  "index.html",
+  "404.html",
+  "_headers",
+  "robots.txt",
+  "sitemap.xml",
+  "llms.txt",
+  "googleb41e1fc39ebed2e3.html",
+];
 
 for (const file of staticFiles) {
   await copyFile(resolve(root, file), resolve(output, file));
