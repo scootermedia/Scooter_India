@@ -1,0 +1,52 @@
+[
+  {
+    "route": "/",
+    "source": "home.html",
+    "schemaType": "WebPage",
+    "title": "Scooter Media | A Global Video Production Company",
+    "description": "Scooter Media is an India-based video production company creating commercials, branded films, corporate videos, photography, animation, CGI and AI films across India and globally.",
+    "socialDescription": "Commercials, branded films, corporate videos, photography, animation, CGI and AI filmmaking produced across India and globally."
+  },
+  {
+    "route": "/about",
+    "source": "about.html",
+    "schemaType": "AboutPage",
+    "title": "About Scooter Media | Global Content Production & AI Filmmaking",
+    "description": "Scooter Media is a creative production studio founded in 2013, with hubs in Dubai, Mumbai and Vancouver. Culturally fluent, creatively driven, globally connected. Watch the 2026 showreel."
+  },
+  {
+    "route": "/work",
+    "source": "work.html",
+    "schemaType": "CollectionPage",
+    "title": "Selected Work | Scooter Media",
+    "description": "Selected commercials, brand films and corporate videos produced by Scooter Media for Boeing, Waldorf Astoria Dubai, PUMA, H&M Group, AD by Arvind and Discovery+."
+  },
+  {
+    "route": "/clients",
+    "source": "clients.html",
+    "schemaType": "WebPage",
+    "title": "Clients | Scooter Media",
+    "description": "Global, regional and local brands and partners Scooter Media has produced for, including Boeing, PUMA, H&M Group, Google, Meta, Starbucks, Toyota and Wipro."
+  },
+  {
+    "route": "/crew",
+    "source": "crew.html",
+    "schemaType": "WebPage",
+    "title": "Crew | Scooter Media",
+    "description": "Meet the people behind Scooter Media's work, led by founder Richaa Agarwal, with behind-the-scenes footage from our productions."
+  },
+  {
+    "route": "/news",
+    "source": "news.html",
+    "schemaType": "WebPage",
+    "title": "In the News | Scooter Media",
+    "description": "Scooter Media in the press, with coverage in LBB Online, Exchange4Media, Media Infoline and Ads of Brands."
+  },
+  {
+    "route": "/contact",
+    "source": "contact.html",
+    "schemaType": "ContactPage",
+    "title": "Contact | Scooter Media",
+    "description": "Got an idea? Start a conversation with Scooter Media. Offices in Mumbai and Dubai, with a hub in Vancouver."
+  }
+]

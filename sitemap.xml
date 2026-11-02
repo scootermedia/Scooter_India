@@ -3,13 +3,21 @@
   xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://www.scootermedia.co/</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-11-02</lastmod>
+  </url>
+  <url>
+    <loc>https://www.scootermedia.co/about</loc>
+    <lastmod>2026-11-02</lastmod>
     <video:video>
       <video:thumbnail_loc>https://www.scootermedia.co/assets/videos/GbhS9Zb3KzE.jpg</video:thumbnail_loc>
       <video:title>Scooter Media Showreel 2026</video:title>
       <video:description>Selected commercial, branded content and video production work by Scooter Media.</video:description>
       <video:player_loc>https://www.youtube.com/embed/GbhS9Zb3KzE</video:player_loc>
     </video:video>
+  </url>
+  <url>
+    <loc>https://www.scootermedia.co/work</loc>
+    <lastmod>2026-11-02</lastmod>
     <video:video>
       <video:thumbnail_loc>https://www.scootermedia.co/assets/videos/8b2J10zXZv4.jpg</video:thumbnail_loc>
       <video:title>Boeing India Library Shoot for Boeing USA</video:title>
@@ -46,11 +54,27 @@
       <video:description>Digital video promo production for Discovery+ on Daily Hunt.</video:description>
       <video:player_loc>https://www.youtube.com/embed/nMs4AbhIkzc</video:player_loc>
     </video:video>
+  </url>
+  <url>
+    <loc>https://www.scootermedia.co/clients</loc>
+    <lastmod>2026-11-02</lastmod>
+  </url>
+  <url>
+    <loc>https://www.scootermedia.co/crew</loc>
+    <lastmod>2026-11-02</lastmod>
     <video:video>
       <video:thumbnail_loc>https://www.scootermedia.co/assets/videos/URvzko5gisA.jpg</video:thumbnail_loc>
       <video:title>Wipro Thank You Film BTS</video:title>
       <video:description>Behind the scenes of a Wipro film production by Scooter Media.</video:description>
       <video:player_loc>https://www.youtube.com/embed/URvzko5gisA</video:player_loc>
     </video:video>
+  </url>
+  <url>
+    <loc>https://www.scootermedia.co/news</loc>
+    <lastmod>2026-11-02</lastmod>
+  </url>
+  <url>
+    <loc>https://www.scootermedia.co/contact</loc>
+    <lastmod>2026-11-02</lastmod>
   </url>
 </urlset>

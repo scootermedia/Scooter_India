@@ -11,6 +11,24 @@
 /index.html
   Cache-Control: public, max-age=0, must-revalidate
 
+/about/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/clients/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/work/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/crew/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/news/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/contact/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
 /404.html
   Cache-Control: public, max-age=0, must-revalidate
 
