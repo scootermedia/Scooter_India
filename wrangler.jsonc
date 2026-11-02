@@ -22,12 +22,19 @@
     "run_worker_first": [
       "/",
       "/about",
+      "/about/",
       "/clients",
+      "/clients/",
       "/work",
+      "/work/",
       "/crew",
+      "/crew/",
       "/news",
+      "/news/",
       "/contact",
-      "/locations"
+      "/contact/",
+      "/locations",
+      "/locations/"
     ],
     "html_handling": "none",
     "not_found_handling": "404-page"

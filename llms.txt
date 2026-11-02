@@ -2,6 +2,15 @@
 
 > Scooter Media is an India-based creative production company founded in 2013 and owned by Scooter Media LLP. It produces commercials, branded films, corporate videos, digital content, photography, animation, CGI and AI films for clients in India and worldwide.
 
+## Pages
+
+- [About](https://www.scootermedia.co/about): studio overview and 2026 showreel
+- [Work](https://www.scootermedia.co/work): selected commercials, brand films and corporate videos
+- [Clients](https://www.scootermedia.co/clients): brands and partners
+- [Crew](https://www.scootermedia.co/crew): the people behind the work
+- [In the News](https://www.scootermedia.co/news): press coverage
+- [Contact](https://www.scootermedia.co/contact): get in touch
+
 ## Core services
 
 - End-to-end film and video production

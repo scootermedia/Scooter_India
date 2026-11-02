@@ -2,6 +2,26 @@
 
 Static website for Scooter Media. It builds to `dist/` for Cloudflare Workers, Cloudflare Pages, GitHub Pages, and Netlify.
 
+## Where things live
+
+Each section of the site is its own page with its own URL, title and description:
+
+| Page | URL | Content file |
+| --- | --- | --- |
+| Home | `/` | `src/pages/home.html` |
+| About | `/about` | `src/pages/about.html` |
+| Work | `/work` | `src/pages/work.html` |
+| Clients | `/clients` | `src/pages/clients.html` |
+| Crew | `/crew` | `src/pages/crew.html` |
+| In the News | `/news` | `src/pages/news.html` |
+| Contact | `/contact` | `src/pages/contact.html` |
+
+- `src/layout.html`: the shared page shell (head, navigation, footer) used by every page.
+- `src/pages.json`: each page's URL, title, meta description and schema type. Add a page here and in `src/pages/` to create a new one, then add it to `src/worker.js`, `wrangler.jsonc` (`run_worker_first`) and `sitemap.xml`.
+- `assets/css/site.css` and `assets/js/site.js`: shared styles and scripts.
+
+`npm run build` assembles the pages into `dist/` (`dist/index.html`, `dist/about/index.html`, …). Use absolute asset paths (`/assets/...`) in page files so they work at every URL.
+
 ## Local preview
 
 ```bash
