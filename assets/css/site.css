@@ -410,6 +410,7 @@ button {
 
 .about h1 span {
   color: var(--ocean-blue);
+  white-space: nowrap;
 }
 
 .about-copy {
