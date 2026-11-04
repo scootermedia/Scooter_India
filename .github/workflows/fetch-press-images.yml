@@ -1,0 +1,43 @@
+name: Fetch press images (one-off)
+
+on:
+  push:
+    branches: [press-images]
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download hero images
+        run: |
+          set -u
+          mkdir -p assets/press
+          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
+          get() { # name url
+            if curl -fsSL -A "$UA" -m 60 -o "assets/press/$1" "$2"; then echo "OK   $1 <- $2"; else echo "FAIL $1 <- $2"; rm -f "assets/press/$1"; fi
+          }
+          og() { # name page-url : download the page's og:image
+            html=$(curl -fsSL -A "$UA" -m 60 "$2" || true)
+            img=$(printf '%s' "$html" | grep -oiE '<meta[^>]+(property|name)="(og:image|twitter:image)"[^>]*>' | grep -oiE 'content="[^"]+"' | head -1 | sed -E 's/content="([^"]+)"/\1/; s/&amp;/\&/g')
+            if [ -n "$img" ]; then get "$1" "$img"; else echo "NONE $1 (no og:image on $2)"; fi
+          }
+          get lbb-bella.jpg "https://d3q27bh1u24u2o.cloudfront.net/resized/1200/news/2025-09/bin25-m.THh-wTj6.jpg"
+          get adsofbrands-bella.png "https://adsofbrands.net/images/news/1/17581389324732.png"
+          get mediainfoline-fanoz.jpg "https://www.mediainfoline.com/wp-content/uploads/2025/04/Fanoz-lates-video-dropped.jpg"
+          get retailupdates-starbucks.jpg "https://retailupdates.news/wp-content/uploads/2023/05/img_3386.jpg"
+          og exchange4media-fanoz "https://www.exchange4media.com/marketing-news/ajinkya-rahane-explores-the-concept-of-fans-in-ad-for-fanoz-142385.html"
+          og businessmicro-fanoz "https://businessmicro.in/business/fanoz-launches-who-is-a-fan-video-with-brand-ambassador-ajinkya-rahane-portraying-multiple-fan-archetypes/"
+          og vogue-films "https://www.vogue.in/content/fashion-weeks-best-new-films"
+          og toi-italian-fest "https://timesofindia.indiatimes.com/city/kolkata/school-kids-debut-at-italian-film-festival/articleshow/66621.cms"
+          file assets/press/* || true
+      - name: Commit images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add assets/press
+          git commit -m "Add press article hero images" || echo "nothing to commit"
+          git push
