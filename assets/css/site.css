@@ -410,7 +410,25 @@ button {
 
 .about h1 span {
   color: var(--ocean-blue);
+}
+
+/* "AI FILMMAKING" always on its own single line */
+.about h1 .about-ai {
+  display: block;
   white-space: nowrap;
+}
+
+/* The ✕ sits at the end of the PRODUCTION line */
+.about h1 .about-x {
+  display: inline-block;
+
+  margin-left: -0.05em;
+
+  font-size: 0.62em;
+  font-weight: 300;
+  vertical-align: middle;
+
+  opacity: 0.7;
 }
 
 .about-copy {
@@ -1998,9 +2016,6 @@ footer {
     overflow-wrap: anywhere;
   }
 
-  .about h1 span {
-    display: block;
-  }
 
   .cta h1 {
     font-size: clamp(34px, 13vw, 60px);
